@@ -1,34 +1,4 @@
-Glance from scratch
-Details
-Activity
-Glance from scratch
-Sharing Info
-
-General Info
-Type
-HTML
-Size
-4 KB (3,933 bytes)
-Storage used
-4 KB (3,933 bytes)
-Location
-Quasimatic
-Owner
-me
-Modified
-9:15 PM by me
-Opened
-9:15 PM by me
-Created
-9:15 PM with StackEdit
-Description
-Add a description
-Download permissions
-Viewers can download
-Get notifications on your computer for shared files and important events.
-TURN ON
-
-
+<html><body>
 <h1 id="glance-from-scratch">Glance from scratch</h1>
 
 <p>This guide is meant  for non technical users, but you can use it anyway</p>
@@ -97,3 +67,4 @@ Then lets print the result to console: <br>
 
 <p>Lets run the script: <br>
 <code>node imdb.js</code></p>
+</body></html>

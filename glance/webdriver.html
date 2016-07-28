@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="A collection of open source libraries to make test automation easier than you've ever seen">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Quasimatic - Tools for test automation</title>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-75706875-1', 'auto');
+  ga('send', 'pageview');
+</script>
+  </head>
+
+  <body>
+        <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title">Quasimatic</h1>
+        </header>
+    </div>
+    
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+          <h1 id="glance-from-scratch">Glance from scratch</h1>
+
+<p>This guide is meant for non technical users, but you can use it anyway</p>
+
+<p>Start checklist (you can skip to the verify step in each action if you think installation exists. Otherwise standard next&gt;next&gt;next installation):</p>
+
+<ol>
+  <li>Install Java jdk -
+ a.  <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">latest download at time of writing  (Java 8)</a>
+ b. Verify Java installation by opening a <strong>new</strong> cmd window and type <code class="highlighter-rouge">java -version</code> - the version should appear</li>
+  <li>Install Javascript -
+a. (<a href="https://nodejs.org/dist/v4.4.5/node-v4.4.5-x64.msi">Latest Node.js instalation at time of writing</a>,   includes npm (node package manager))
+ b. Verify Node installation by opening a <strong>new</strong> cmd window and type <code class="highlighter-rouge">node --version</code> - the version should appear
+c. Verify npm installation by opening a <strong>new</strong> cmd window and type <code class="highlighter-rouge">npm --version</code> - the version should appear</li>
+  <li>Install Selenium -
+a. Now that npm is installed type <code class="highlighter-rouge">npm install -g selenium-server</code> (the -g will install it globally)
+b. Verify installation by typing <code class="highlighter-rouge">selenium</code> - this should start selenium and not return to prompt, leave this cmd window open while automating.</li>
+  <li>Notepad or ide (lets write a test) - <a href="https://notepad-plus-plus.org/download/">notepad++ is a good place to start</a></li>
+  <li>Firefox browser for testing</li>
+</ol>
+
+<p>Now let’s write some automation - we will check “back to the future”’s ratings on imdb:</p>
+
+<ol>
+  <li>Lets create a directory for  automation projects : c:/projects in it we will create a folder for our first project c:/projects/imdb</li>
+  <li>In our new directory  we will type <code class="highlighter-rouge">npm install glance-webdriver</code>, this will install glance webdriver in our project folder</li>
+  <li>Create and edit a new file titled imdb.js</li>
+  <li>First we include the glance library as default :
+<code class="highlighter-rouge">var Glance = require(“glance-webdriver”).default;</code></li>
+  <li>Create a new webdriver for firefox:
+<code class="highlighter-rouge">var glance = new Glance({
+ driverConfig: {
+     desiredCapabilities: {browserName: ‘firefox’}
+         }});</code></li>
+  <li>Go to IMDB:
+glance.url(“http://www.imdb.com/”)</li>
+  <li>Lets enter the name to search for:
+.set(“Find movies”,”back to the future”)</li>
+  <li>Click search (since it’s an icon we need to use the dom):
+.click(“magnifyingglass”)</li>
+  <li>We found a few options choose the one we want:
+.click(“Back to the Future (1985)”)</li>
+  <li>Since there is no label we want we use the dom again:
+.get(“ratingValue”)
+Then lets print the result to console:
+.then(function(result){console.log(result)});</li>
+</ol>
+
+<p>Our final script is :
+```var Glance = require(“glance-webdriver”).default;
+var glance = new Glance({
+  driverConfig: {
+     desiredCapabilities: {browserName: ‘firefox’}
+        }});</p>
+
+<p>glance.url(“http://www.imdb.com/”)
+  .set(“Find movies”,”back to the future”)
+  .click(“magnifyingglass”)
+  .click(“Back to the Future (1985)”)
+  .get(“ratingValue”)
+  .then(function(result){
+  console.log(result)
+  });
+```
+Lets run the script:
+<code class="highlighter-rouge">node imdb.js</code></p>
+
+
+        </section>
+      </div>
+
+      <!-- FOOTER  -->
+      <div id="footer_wrap" class="outer">
+        <footer class="inner">
+          <p class="copyright">Slate theme maintained by <a href="https://github.com/jasoncostello">Jason Costello</a></p>
+          <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        </footer>
+      </div>
+
+    </body>
+  </html>

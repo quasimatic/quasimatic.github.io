@@ -2,22 +2,9 @@
 title: ''
 layout: ''
 ---
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {{ post.date | date: "%b %-d, %Y" }}
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ " feed.xml"="" |="" prepend:="" site.baseurl="" }}"="">via RSS</a></p><p><br></p><ul>{% for member in site.data.members %} <li> <a href="https://github.com/{{ member.github }}"> {{ member.name }} </a> </li>{% endfor %}</ul><br>
-
-</div>
+<h3>Welcome to Quasimatic.</h3>
+<p>Automation with job security!<a href="https://github.com/quasimatic/quasimatic.github.io/blob/b55a5d22eefa3863f0d63a168780023c1b34195c/index.md#libraries"></a>Libraries</p>
+<h3>Libraries</h3>
+<p>Glance webdriver - A selenium automation tool that utilizes contextual labels to automate faster and loosen the ties to the DOM.Cast - Declaratively set and Validate the state of your web page</p>
+<h3><a href="https://github.com/quasimatic/quasimatic.github.io/blob/b55a5d22eefa3863f0d63a168780023c1b34195c/index.md#support-or-contact"></a>Support or Contact</h3>
+<p>Contact us at&nbsp;<a href="mailto:info@quasimatic.org">info@quasimatic.org</a>Follow us on @QuasimaticGit us&nbsp;at&nbsp;<a href="https://github.com/quasimatic/glance-webdriver-js">https://github.com/quasimatic/glance-webdriver-js</a></p>

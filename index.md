@@ -1,6 +1,6 @@
 ---
 title: index
-date: '2016-07-28 14:08:00'
+date: '2016-07-28 00:00:00'
 layout: ''
 ---
 ### Welcome to Quasimatic.

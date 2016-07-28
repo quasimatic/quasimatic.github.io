@@ -31,10 +31,13 @@ Now let’s write some automation - we will check “back to the future”’s r
 1. First we include the glance library as default :
 `var Glance = require(“glance-webdriver”).default;`
 1. Create a new webdriver for firefox:
-`var glance = new Glance({
+```
+var glance = new Glance({
 	driverConfig: {
 		desiredCapabilities: {browserName: ‘firefox’}
-			}});`
+	}
+});
+```
 1. Go to IMDB:
 glance.url(“http://www.imdb.com/”)
 1. Lets enter the name to search for:
@@ -49,7 +52,8 @@ Then lets print the result to console:
 .then(function(result){console.log(result)});
 
 Our final script is :
-```var Glance = require("glance-webdriver").default;
+```
+var Glance = require("glance-webdriver").default;
 var glance = new Glance({
   driverConfig: {
      desiredCapabilities: {browserName: 'firefox'}

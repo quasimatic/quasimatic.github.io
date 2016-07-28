@@ -30,7 +30,7 @@ Now let’s write some automation - we will check “back to the future”’s r
 1. Create and edit a new file titled imdb.js
 1. First we include the glance library as default : `var Glance = require(“glance-webdriver”).default;`
 1. Create a new webdriver for firefox:
-~~~
+~~~ javascript
 var glance = new Glance({
 	driverConfig: {
 		desiredCapabilities: {browserName: ‘firefox’}
@@ -51,7 +51,7 @@ Then lets print the result to console:
 .then(function(result){console.log(result)});
 
 Our final script is :
-~~~
+~~~ javascript
 var Glance = require("glance-webdriver").default;
 var glance = new Glance({
   driverConfig: {

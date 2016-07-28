@@ -28,16 +28,15 @@ Now let’s write some automation - we will check “back to the future”’s r
 1. Lets create a directory for  automation projects : c:/projects in it we will create a folder for our first project c:/projects/imdb
 1. In our new directory  we will type `npm install glance-webdriver`, this will install glance webdriver in our project folder
 1. Create and edit a new file titled imdb.js
-1. First we include the glance library as default :
-`var Glance = require(“glance-webdriver”).default;`
+1. First we include the glance library as default : `var Glance = require(“glance-webdriver”).default;`
 1. Create a new webdriver for firefox:
-```
+~~~
 var glance = new Glance({
 	driverConfig: {
 		desiredCapabilities: {browserName: ‘firefox’}
 	}
 });
-```
+~~~
 1. Go to IMDB:
 glance.url(“http://www.imdb.com/”)
 1. Lets enter the name to search for:
@@ -52,7 +51,7 @@ Then lets print the result to console:
 .then(function(result){console.log(result)});
 
 Our final script is :
-```
+~~~
 var Glance = require("glance-webdriver").default;
 var glance = new Glance({
   driverConfig: {
@@ -67,6 +66,6 @@ var glance = new Glance({
   .then(function(result){
   console.log(result)
   });
-```
+~~~
 Lets run the script:
-`node imdb.js`
+    node imdb.js

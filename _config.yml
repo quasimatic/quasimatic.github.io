@@ -28,10 +28,10 @@ github_username:  jekyll
 markdown: kramdown
 theme: minima
 
- github: [metadata]
- kramdown:
-   input: GFM
-   hard_wrap: false
- gems:
-   - jekyll-coffeescript
-   - jekyll-paginate
+github: [metadata]
+kramdown:
+  input: GFM
+  hard_wrap: false
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate

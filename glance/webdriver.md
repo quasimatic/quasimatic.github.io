@@ -10,7 +10,7 @@ This guide is meant for non technical users, but you can use it anyway
 Start checklist (you can skip to the verify step in each action if you think installation exists. Otherwise standard next>next>next installation):
 
 1. Install Java jdk -
- a.  [latest download at time of writing  (Java 8)](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+ a. [latest download at time of writing  (Java 8)](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
  b. Verify Java installation by opening a **new** cmd window and type `java -version` - the version should appear
 1. Install Javascript -
 a. ([Latest Node.js instalation at time of writing](https://nodejs.org/dist/v4.4.5/node-v4.4.5-x64.msi),   includes npm (node package manager))
@@ -25,8 +25,8 @@ b. Verify installation by typing `selenium` - this should start selenium and not
 
 Now let’s write some automation - we will check “back to the future”’s ratings on imdb:
 
-1. Lets create a directory for  automation projects : c:/projects in it we will create a folder for our first project c:/projects/imdb
-1. In our new directory  we will type `npm install glance-webdriver`, this will install glance webdriver in our project folder
+1. Lets create a directory for automation projects : c:/projects in it we will create a folder for our first project c:/projects/imdb
+1. In our new directory we will type `npm install glance-webdriver`, this will install glance webdriver in our project folder
 1. Create and edit a new file titled imdb.js
 1. First we include the glance library as default : `var Glance = require(“glance-webdriver”).default;`
 1. Create a new webdriver for firefox:

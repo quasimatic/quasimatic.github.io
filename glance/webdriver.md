@@ -1,14 +1,11 @@
 ---
 title: Glance - Webdriver
-date: '2016-07-28 15:30:00'
+date: '2016-07-28 00:00:00'
 layout: default
 ---
+# Glance from scratch
 
-
-
-#Glance from scratch
-
-This guide is meant  for non technical users, but you can use it anyway
+This guide is meant for non technical users, but you can use it anyway
 
 Start checklist (you can skip to the verify step in each action if you think installation exists. Otherwise standard next>next>next installation):
 

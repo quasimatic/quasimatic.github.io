@@ -3,7 +3,7 @@ title: Glance-Webdriver
 date: '2016-07-28 00:00:00'
 layout: default
 ---
-# Glance from scratch
+### Glance from scratch
 
 This guide is meant for non technical users, but you can use it anyway.
 

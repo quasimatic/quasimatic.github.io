@@ -75,6 +75,9 @@ a {
   text-shadow: none;
 }
 
+h1 a {
+  text-decoration: none;
+}
 a:hover, a:focus {text-decoration: underline;}
 
 footer a {

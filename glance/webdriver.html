@@ -42,15 +42,24 @@
 
 <ol>
   <li>Install Java jdk -
- a. <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">latest download at time of writing  (Java 8)</a>
- b. Verify Java installation by opening a <strong>new</strong> cmd window and type <code class="highlighter-rouge">java -version</code> - the version should appear</li>
+    <ol>
+      <li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">latest download at time of writing  (Java 8)</a></li>
+      <li>Verify Java installation by opening a <strong>new</strong> cmd window and type <code class="highlighter-rouge">java -version</code> - the version should appear</li>
+    </ol>
+  </li>
   <li>Install Javascript -
-a. (<a href="https://nodejs.org/dist/v4.4.5/node-v4.4.5-x64.msi">Latest Node.js instalation at time of writing</a>,   includes npm (node package manager))
- b. Verify Node installation by opening a <strong>new</strong> cmd window and type <code class="highlighter-rouge">node --version</code> - the version should appear
-c. Verify npm installation by opening a <strong>new</strong> cmd window and type <code class="highlighter-rouge">npm --version</code> - the version should appear</li>
+    <ol>
+      <li>(<a href="https://nodejs.org/dist/v4.4.5/node-v4.4.5-x64.msi">Latest Node.js instalation at time of writing</a>,   includes npm (node package manager))</li>
+      <li>Verify Node installation by opening a <strong>new</strong> cmd window and type <code class="highlighter-rouge">node --version</code> - the version should appear</li>
+      <li>Verify npm installation by opening a <strong>new</strong> cmd window and type <code class="highlighter-rouge">npm --version</code> - the version should appear</li>
+    </ol>
+  </li>
   <li>Install Selenium -
-a. Now that npm is installed type <code class="highlighter-rouge">npm install -g selenium-server</code> (the -g will install it globally)
-b. Verify installation by typing <code class="highlighter-rouge">selenium</code> - this should start selenium and not return to prompt, leave this cmd window open while automating.</li>
+    <ol>
+      <li>Now that npm is installed type <code class="highlighter-rouge">npm install -g selenium-server</code> (the -g will install it globally)</li>
+      <li>Verify installation by typing <code class="highlighter-rouge">selenium</code> - this should start selenium and not return to prompt, leave this cmd window open while automating.</li>
+    </ol>
+  </li>
   <li>Notepad or ide (lets write a test) - <a href="https://notepad-plus-plus.org/download/">notepad++ is a good place to start</a></li>
   <li>Firefox browser for testing</li>
 </ol>
@@ -61,15 +70,18 @@ b. Verify installation by typing <code class="highlighter-rouge">selenium</code>
   <li>Lets create a directory for automation projects : c:/projects in it we will create a folder for our first project c:/projects/imdb</li>
   <li>In our new directory we will type <code class="highlighter-rouge">npm install glance-webdriver</code>, this will install glance webdriver in our project folder</li>
   <li>Create and edit a new file titled imdb.js</li>
-  <li>First we include the glance library as default : <code class="highlighter-rouge">var Glance = require(“glance-webdriver”).default;</code></li>
-  <li>Create a new webdriver for firefox:
-~~~
-var glance = new Glance({
- driverConfig: {
-     desiredCapabilities: {browserName: ‘firefox’}
- }
-});
-~~~</li>
+  <li>First we include the glance library as default: <code class="highlighter-rouge">var Glance = require(“glance-webdriver”).default;</code></li>
+  <li>Create a new webdriver for firefox:</li>
+</ol>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">glance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Glance</span><span class="p">({</span>
+	<span class="na">driverConfig</span><span class="p">:</span> <span class="p">{</span>
+		<span class="na">desiredCapabilities</span><span class="p">:</span> <span class="p">{</span><span class="na">browserName</span><span class="p">:</span> <span class="err">‘</span><span class="nx">firefox</span><span class="err">’</span><span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+<ol>
   <li>Go to IMDB:
 glance.url(“http://www.imdb.com/”)</li>
   <li>Lets enter the name to search for:
@@ -84,24 +96,25 @@ Then lets print the result to console:
 .then(function(result){console.log(result)});</li>
 </ol>
 
-<p>Our final script is :
-~~~
-var Glance = require(“glance-webdriver”).default;
-var glance = new Glance({
-  driverConfig: {
-     desiredCapabilities: {browserName: ‘firefox’}
-        }});</p>
+<p>Our final script is :</p>
 
-<p>glance.url(“http://www.imdb.com/”)
-  .set(“Find movies”,”back to the future”)
-  .click(“magnifyingglass”)
-  .click(“Back to the Future (1985)”)
-  .get(“ratingValue”)
-  .then(function(result){
-  console.log(result)
-  });
-~~~
-Lets run the script:
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Glance</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"glance-webdriver"</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">glance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Glance</span><span class="p">({</span>
+  <span class="na">driverConfig</span><span class="p">:</span> <span class="p">{</span>
+     <span class="na">desiredCapabilities</span><span class="p">:</span> <span class="p">{</span><span class="na">browserName</span><span class="p">:</span> <span class="s1">'firefox'</span><span class="p">}</span>
+        <span class="p">}});</span>
+
+   <span class="nx">glance</span><span class="p">.</span><span class="nx">url</span><span class="p">(</span><span class="s2">"http://www.imdb.com/"</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">"Find movies"</span><span class="p">,</span><span class="s2">"back to the future"</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s2">"magnifyingglass"</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s2">"Back to the Future (1985)"</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"ratingValue"</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+  <span class="p">});</span>
+</code></pre>
+</div>
+<p>Lets run the script:
     node imdb.js</p>
 
 

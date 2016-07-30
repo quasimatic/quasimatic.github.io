@@ -2,6 +2,7 @@
 date = "2016-07-29T20:12:10-07:00"
 draft = true
 title = "Glance from scratch"
+type = "page"
 +++
 
 This guide is meant for non technical users, but you can use it anyway.

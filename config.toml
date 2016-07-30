@@ -1,6 +1,7 @@
 baseurl     = "https://quasimatic.org"  # the baseurl for your website
 title       = "Quasimatic - Open Source Projects"     # blog title
 paginate    = 10                    # the number of posts on a page
+theme       = "hugo-multi-bootswatch"
 
 [permalinks]
     # Optional. Change the permalink format for the 'post' content type.

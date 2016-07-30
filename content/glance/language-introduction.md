@@ -5,4 +5,3 @@ title = "Glance Language Introduction"
 type = "page"
 
 +++
-

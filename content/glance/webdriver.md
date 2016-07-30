@@ -1,10 +1,10 @@
 +++
-date = "2016-07-29T20:12:10-07:00"
-draft = true
+date = "2016-07-29T20:12:00+00:00"
+draft = false
 title = "Glance from scratch"
 type = "page"
-+++
 
++++
 This guide is meant for non technical users, but you can use it anyway.
 
 Start checklist (you can skip to the verify step in each action if you think installation exists. Otherwise standard next>next>next installation):

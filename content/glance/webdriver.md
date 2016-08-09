@@ -7,13 +7,13 @@ type = "page"
 +++
 This guide is meant for non technical users, but you can use it anyway.
 
-Start checklist (you can skip to the verify step in each action if you think installation exists. Otherwise standard next>next>next installation):
+Requirements Checklist (you can skip to the verify step in each action if you think installation exists. Otherwise standard next>next>next installation):
 
 1. Install Java jdk -
     1. [latest download at time of writing  (Java 8)](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     2. Verify Java installation by opening a **new** cmd window and type `java -version` - the version should appear
 2. Install Javascript -
-    1. ([Latest Node.js instalation at time of writing](https://nodejs.org/dist/v4.4.5/node-v4.4.5-x64.msi),   includes npm (node package manager))
+    1. ([Latest Node.js instalation at time of writing](https://nodejs.org/),   includes npm (node package manager))
     2. Verify Node installation by opening a **new** cmd window and type `node --version` - the version should appear
     3. Verify npm installation by opening a **new** cmd window and type `npm --version` - the version should appear
 3. Install Selenium -

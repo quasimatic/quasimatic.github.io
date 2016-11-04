@@ -30,14 +30,11 @@ Now let’s write some automation - we will make a simple todo list on [todomvc.
 3. Create and edit a new file titled todo.js
 4. First we include the glance library as default: `var Glance = require(“glance-webdriver”).default;`
 5. Create a new webdriver for chrome:
-
-
-```
-var glance = new Glance({
-  driverConfig: { desiredCapabilities: {browserName: ‘chrome’} }
-});
-```
-
+    ```
+    var glance = new Glance({
+      driverConfig: { desiredCapabilities: {browserName: ‘chrome’} }
+    });
+    ```
 6. Go to mvctodo.com:
 `glance.url(“http://todomvc.com/”)`
 7. Lets choose the React todo:

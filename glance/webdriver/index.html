@@ -101,15 +101,12 @@
 <li>In our new directory we will type <code>npm install glance-webdriver</code>, this will install glance webdriver in our project folder</li>
 <li>Create and edit a new file titled todo.js</li>
 <li>First we include the glance library as default: <code>var Glance = require(“glance-webdriver”).default;</code></li>
-<li>Create a new webdriver for chrome:</li>
-</ol>
-
-<pre><code>var glance = new Glance({
+<li>Create a new webdriver for chrome:
+<code>
+var glance = new Glance({
   driverConfig: { desiredCapabilities: {browserName: ‘chrome’} }
 });
-</code></pre>
-
-<ol>
+</code></li>
 <li>Go to mvctodo.com:
 <code>glance.url(“http://todomvc.com/”)</code></li>
 <li>Lets choose the React todo:

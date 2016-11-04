@@ -1,3 +1,0 @@
-- service: hugo
-  tag: master
-  command: ./deploy.sh

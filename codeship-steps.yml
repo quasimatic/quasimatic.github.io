@@ -1,0 +1,3 @@
+- service: hugo
+  tag: deploy
+  command: ./deploy.sh

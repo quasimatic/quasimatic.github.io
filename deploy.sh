@@ -104,7 +104,7 @@ main() {
 	
 	#append hash to commit message unless no hash flag was found
 	if [ $append_hash = true ]; then
-		commit_message="$commit_message"$'\n\n'"generated from commit $commit_hash"
+		commit_message="$commit_message"$'\n\n'"generated from commit $commit_hash\n[skip ci]"
 	fi
 		
 	previous_branch=`git rev-parse --abbrev-ref HEAD`

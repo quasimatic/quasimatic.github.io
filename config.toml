@@ -1,5 +1,5 @@
 baseurl     = "https://quasimatic.org"  # the baseurl for your website
-title       = "Quasimatic - Open Source Projects"     # blog title
+title       = "Quasimatic - Open Source"     # blog title
 paginate    = 10                    # the number of posts on a page
 theme       = "hugo-multi-bootswatch"
 

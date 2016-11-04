@@ -32,9 +32,11 @@ Now let’s write some automation - we will make a simple todo list on [todomvc.
 5. Create a new webdriver for chrome:
 
 
-```var glance = new Glance({```
- ```driverConfig: { desiredCapabilities: {browserName: ‘chrome’} }```
-```});```
+```
+var glance = new Glance({
+  driverConfig: { desiredCapabilities: {browserName: ‘chrome’} }
+});
+```
 
 6. Go to mvctodo.com:
 `glance.url(“http://todomvc.com/”)`

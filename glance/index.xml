@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Glance-rsses on Quasimatic - Open Source Projects</title>
+    <title>Glance-rsses on Quasimatic - Open Source</title>
     <link>https://quasimatic.org/glance/index.xml</link>
-    <description>Recent content in Glance-rsses on Quasimatic - Open Source Projects</description>
+    <description>Recent content in Glance-rsses on Quasimatic - Open Source</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2015 ~ Quasimatic</copyright>

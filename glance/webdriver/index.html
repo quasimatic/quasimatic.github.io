@@ -100,44 +100,74 @@
 <li>Lets create a directory for automation projects : c:/projects in it we will create a folder for our first project c:/projects/todo</li>
 <li>In our new directory we will type <code>npm install glance-webdriver</code>, this will install glance webdriver in our project folder</li>
 <li>Create and edit a new file titled todo.js</li>
-<li>First we include the glance library as default: <code>var Glance = require(“glance-webdriver”).default;</code></li>
-<li>Create a new webdriver for chrome:
-<code>
-var glance = new Glance({
+
+<li><p>First we include the glance library as default:</p>
+
+<pre><code>var Glance = require(“glance-webdriver”).default;
+</code></pre></li>
+
+<li><p>Create a new webdriver for chrome:</p>
+
+<pre><code>var glance = new Glance({
   driverConfig: { desiredCapabilities: {browserName: ‘chrome’} }
 });
-</code></li>
-<li>Go to mvctodo.com:
-<code>glance.url(“http://todomvc.com/”)</code></li>
-<li>Lets choose the React todo:
-<code>.click(&quot;These are examples written in pure JavaScript.&gt;React&quot;)</code></li>
-<li>let&rsquo;s enter our first item followed by an enter: <code>.set(&quot;What needs to be done?&quot;, &quot;1. test this&quot;)</code></li>
-<li>Press enter to insert the task: <code>.sendKeys(&quot;Enter&quot;)</code></li>
-<li>now for another item: <code>.set(&quot;What needs to be done?&quot;, &quot;2. test this too&quot;)</code></li>
-<li>Press enter to insert the task: <code>.sendKeys(&quot;Enter&quot;)</code></li>
-<li>we&rsquo;ll mark the first item as done, since the checkbox doesnt have a label we look in the dom to see it is an input element which allows us to use: <code>.click(&quot;1. test this &gt; input&quot;)</code></li>
+</code></pre></li>
+
+<li><p>Go to mvctodo.com:</p>
+
+<pre><code>glance.url(“http://todomvc.com/”)
+</code></pre></li>
+
+<li><p>Lets choose the React todo:</p>
+
+<pre><code>.click(&quot;These are examples written in pure JavaScript.&gt;React&quot;)
+</code></pre></li>
+
+<li><p>let&rsquo;s enter our first item followed by an enter:</p>
+
+<pre><code>.set(&quot;What needs to be done?&quot;, &quot;1. test this&quot;)
+</code></pre></li>
+
+<li><p>Press enter to insert the task:</p>
+
+<pre><code>.sendKeys(&quot;Enter&quot;)
+</code></pre></li>
+
+<li><p>now for another item:</p>
+
+<pre><code>.set(&quot;What needs to be done?&quot;, &quot;2. test this too&quot;)
+</code></pre></li>
+
+<li><p>Press enter to insert the task:</p>
+
+<pre><code>.sendKeys(&quot;Enter&quot;)
+</code></pre></li>
+
+<li><p>we&rsquo;ll mark the first item as done, since the checkbox doesnt have a label we look in the dom to see it is an input element which allows us to use:</p>
+
+<pre><code>.click(&quot;1. test this &gt; input&quot;)
+</code></pre></li>
 </ol>
 
 <p>Our final script is :</p>
 
 <pre><code class="language-javascript">var Glance = require(&quot;glance-webdriver&quot;).default;
 var glance = new Glance({
-    driverConfig: {
-        desiredCapabilities: {browserName: 'chrome'}
-    }
+  driverConfig: {
+    desiredCapabilities: {browserName: 'chrome'}
+  }
 });
 
 glance.url(&quot;http://todomvc.com/&quot;)
-    .click(&quot;These are examples written in pure JavaScript. &gt; React&quot;)
-    .set(&quot;What needs to be done?&quot;, &quot;1. test this&quot;)
-    .sendKeys(&quot;Enter&quot;)
-    .set(&quot;What needs to be done?&quot;, &quot;2. test this too&quot;)
-    .sendKeys(&quot;Enter&quot;)
-    .click(&quot;1. test this &gt; input&quot;);
+  .click(&quot;These are examples written in pure JavaScript. &gt; React&quot;)
+  .set(&quot;What needs to be done?&quot;, &quot;1. test this&quot;)
+  .sendKeys(&quot;Enter&quot;)
+  .set(&quot;What needs to be done?&quot;, &quot;2. test this too&quot;)
+  .sendKeys(&quot;Enter&quot;)
+  .click(&quot;1. test this &gt; input&quot;);
 </code></pre>
 
-<p>Lets run the script in a new command window:
-    <code>node todo.js</code></p>
+<p>Lets run the script in a new command window: <code>node todo.js</code></p>
 
 		</div>
 	</div>

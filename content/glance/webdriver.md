@@ -19,7 +19,7 @@ Requirements Checklist (you can skip to the verify step in each action if you th
 3. Install Selenium -
     1. Now that npm is installed type `npm install -g selenium-standalone@latest` (the -g will install it globally)
     2. in a new command window type: `selenium-standalone install`
-    3. from now on everytime you want to start selenium open a new command window and type `selenium-standalone start`  (leave the window open as long as your testing.
+    3. from now on everytime you want to start selenium open a new command window and type `selenium-standalone start`  (leave the window open as long as you're testing.
 4. Notepad or ide (lets write a test) - [notepad++ is a good place to start](https://notepad-plus-plus.org/download/)
 5. Chrome browser for testing
 

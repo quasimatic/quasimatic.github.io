@@ -7,19 +7,22 @@ type = "page"
 
 This guide is meant for non technical users, but you can use it anyway.
 
-Requirements Checklist (you can skip to the verify step in each action if you think installation exists. Otherwise standard next>next>next installation):
 
-1. Install Java jdk -
-    1. [latest download at time of writing  (Java 8)](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-    2. Verify Java installation by opening a **new** cmd window and type `java -version` - the version should appear
-2. Install Javascript -
-    1. ([Latest Node.js installation at time of writing](https://nodejs.org/),   includes npm (node package manager))
-    2. Verify Node installation by opening a **new** cmd window and type `node --version` - the version should appear
-    3. Verify npm installation by opening a **new** cmd window and type `npm --version` - the version should appear
-3. Install Selenium -
-    1. Now that npm is installed type `npm install -g selenium-standalone@latest` (the -g will install it globally)
-    2. in a new command window type: `selenium-standalone install`
-    3. from now on everytime you want to start selenium open a new command window and type `selenium-standalone start`  (leave the window open as long as you're testing.
+Requirements Checklist
+(If you need help with installation, more info is available at:
+ http://educate.quasimatic.com/installation/setting-up-selenium)  :
+
+1. Java jdk installation
+
+
+2. Javascript installation
+
+
+
+3. Selenium installation
+
+
+
 4. Notepad or ide (lets write a test) - [notepad++ is a good place to start](https://notepad-plus-plus.org/download/)
 5. Chrome browser for testing
 

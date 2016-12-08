@@ -13,16 +13,8 @@ Requirements Checklist
  http://educate.quasimatic.com/installation/setting-up-selenium)  :
 
 1. Java jdk installation
-
-
 2. Javascript installation
-
-
-
 3. Selenium installation
-
-
-
 4. Notepad or ide (lets write a test) - [notepad++ is a good place to start](https://notepad-plus-plus.org/download/)
 5. Chrome browser for testing
 

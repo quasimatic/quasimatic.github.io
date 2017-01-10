@@ -4,6 +4,7 @@ type = "page"
 +++
 <p>A referencing language to simplify references in your automation</p>
 <h3>Learn about Glance</h3>
+<p><a href="/glance/language-introduction">What is Glance?</a></p>
 <p><a href="/take-a-glance">Take a Glance</a> - Learn how to read Glance by playing a game</p>
 <h3>Browser Testing</h3>
 <p><a href="/glance/webdriver">Glance webdriver</a> - A selenium automation tool that utilizes contextual

@@ -3,12 +3,7 @@
   
   <url>
     <loc>https://quasimatic.org/</loc>
-    <lastmod>2016-07-30T06:34:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://quasimatic.org/glance/language-introduction/</loc>
-    <lastmod>2016-07-30T06:34:00+00:00</lastmod>
+    <lastmod>2016-07-29T20:12:00+00:00</lastmod>
   </url>
   
   <url>
@@ -22,6 +17,10 @@
   
   <url>
     <loc>https://quasimatic.org/glance/</loc>
+  </url>
+  
+  <url>
+    <loc>https://quasimatic.org/glance/language-introduction/</loc>
   </url>
   
 </urlset>

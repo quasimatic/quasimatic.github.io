@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Glance from scratch">
+    <meta name="author" content="Quasimatic">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>Glance from scratch &middot; Quasimatic - Open Source</title>
+
+   	
+    
+        <link rel="stylesheet" href="https://quasimatic.org/css/theme/flatly.css">
+    
+
+    <link rel="stylesheet" href="https://quasimatic.org/css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="https://quasimatic.org/css/style.css">
+
+
+    
+    <script src="https://quasimatic.org/js/jquery.min-2.1.4.js"></script>
+    <script src="https://quasimatic.org/js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Quasimatic - Open Source" />
+
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/agate.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script>
+        window.intercomSettings = {
+            app_id: "twcosaoh"
+        };
+    </script>
+    <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/twcosaoh';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://quasimatic.org">Quasimatic - Open Source</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://quasimatic.org">Home</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>Glance from scratch</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<p>This guide is meant for non technical users, but you can use it anyway.</p>
+
+<p>Requirements Checklist
+(If you need help with installation, more info is available at:
+ <a href="http://educate.quasimatic.com/installation/setting-up-selenium)">http://educate.quasimatic.com/installation/setting-up-selenium)</a>  :</p>
+
+<ol>
+<li>Java jdk installation</li>
+<li>Javascript installation</li>
+<li>Selenium installation</li>
+<li>Notepad or ide (lets write a test) - <a href="https://notepad-plus-plus.org/download/">notepad++ is a good place to start</a></li>
+<li>Chrome browser for testing</li>
+</ol>
+
+<p>Now let’s write some automation - we will make a simple todo list on <a href="http://todomvc.com/">todomvc.com/</a></p>
+
+<ol>
+<li>Lets create a directory for automation projects : c:/projects in it we will create a folder for our first project c:/projects/todo</li>
+<li>In our new directory we will type <code>npm install glance-webdriver</code>, this will install glance webdriver in our project folder</li>
+<li>Create and edit a new file titled todo.js</li>
+
+<li><p>First we include the glance library as default:</p>
+
+<pre><code>var Glance = require(“glance-webdriver”).default;
+</code></pre></li>
+
+<li><p>Create a new webdriver for chrome:</p>
+
+<pre><code>var glance = new Glance({
+  driverConfig: { desiredCapabilities: {browserName: ‘chrome’} }
+});
+</code></pre></li>
+
+<li><p>Go to mvctodo.com:</p>
+
+<pre><code>glance.url(“http://todomvc.com/”)
+</code></pre></li>
+
+<li><p>Lets choose the React todo:</p>
+
+<pre><code>.click(&quot;These are examples written in pure JavaScript.&gt;React&quot;)
+</code></pre></li>
+
+<li><p>let&rsquo;s enter our first item followed by an enter:</p>
+
+<pre><code>.set(&quot;What needs to be done?&quot;, &quot;1. test this&quot;)
+</code></pre></li>
+
+<li><p>Press enter to insert the task:</p>
+
+<pre><code>.sendKeys(&quot;Enter&quot;)
+</code></pre></li>
+
+<li><p>now for another item:</p>
+
+<pre><code>.set(&quot;What needs to be done?&quot;, &quot;2. test this too&quot;)
+</code></pre></li>
+
+<li><p>Press enter to insert the task:</p>
+
+<pre><code>.sendKeys(&quot;Enter&quot;)
+</code></pre></li>
+
+<li><p>we&rsquo;ll mark the first item as done, since the checkbox doesnt have a label we look in the dom to see it is an input element which allows us to use:</p>
+
+<pre><code>.click(&quot;1. test this &gt; input&quot;)
+</code></pre></li>
+</ol>
+
+<p>Our final script is :</p>
+
+<pre><code class="language-javascript">var Glance = require(&quot;glance-webdriver&quot;).default;
+var glance = new Glance({
+  driverConfig: {
+    desiredCapabilities: {browserName: 'chrome'}
+  }
+});
+
+glance.url(&quot;http://todomvc.com/&quot;)
+  .click(&quot;These are examples written in pure JavaScript. &gt; React&quot;)
+  .set(&quot;What needs to be done?&quot;, &quot;1. test this&quot;)
+  .sendKeys(&quot;Enter&quot;)
+  .set(&quot;What needs to be done?&quot;, &quot;2. test this too&quot;)
+  .sendKeys(&quot;Enter&quot;)
+  .click(&quot;1. test this &gt; input&quot;);
+</code></pre>
+
+<p>Lets run the script in a new command window: <code>node todo.js</code></p>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+</div>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; 2015 ~ Quasimatic ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.19 ~ <a href="https://quasimatic.org/license">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                    
+                        <a href="https://www.facebook.com/quasimatic" target="_blank">
+                        <i class="fa fa-facebook-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://twitter.com/quasimatic" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/quasimatic" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

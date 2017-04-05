@@ -52,7 +52,7 @@ Now let’s write some automation - we will make a simple todo list on [todomvc.
 8. let's enter our first item followed by an enter: 
 
     ```
-    .set("What needs to be done?", "1. test this")
+    .set("What needs to be done?", "Buy milk")
     ```
 
 9. Press enter to insert the task: 
@@ -64,7 +64,7 @@ Now let’s write some automation - we will make a simple todo list on [todomvc.
 10. now for another item: 
 
     ```
-    .set("What needs to be done?", "2. test this too")
+    .set("What needs to be done?", "Buy eggs")
     ```
 
 11. Press enter to insert the task: 
@@ -76,7 +76,7 @@ Now let’s write some automation - we will make a simple todo list on [todomvc.
 12. we'll mark the first item as done, since the checkbox doesnt have a label we look in the dom to see it is an input element which allows us to use: 
 
     ```
-    .click("1. test this > input")
+    .click("Buy eggs > checkbox")
     ```
 
 Our final script is :
@@ -90,11 +90,11 @@ var glance = new Glance({
 });
 
 glance.url("http://todomvc.com/")
-  .click("These are examples written in pure JavaScript. > React")
-  .set("What needs to be done?", "1. test this")
+  .click("Examples > React")
+  .set("What needs to be done?", "Buy milk")
   .sendKeys("Enter")
-  .set("What needs to be done?", "2. test this too")
+  .set("What needs to be done?", "Buy eggs")
   .sendKeys("Enter")
-  .click("1. test this > input");
+  .click("Buy eggs > checkbox");
 ```
 Lets run the script in a new command window: `node todo.js`

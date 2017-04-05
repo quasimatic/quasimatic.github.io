@@ -1,5 +1,5 @@
 -+++		
- -title = ""
+ -title = " "		
  -type = "page"		
  -+++
 <p><img style="height: 64px" src="/images/glance.svg"/><p>

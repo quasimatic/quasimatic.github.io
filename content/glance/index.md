@@ -1,3 +1,6 @@
+-+++		
+ -type = "page"		
+ -+++
 <p><img style="height: 64px" src="/images/glance.svg"/><p>
 <p style="font-size: 2rem">A simple way to reference things</p>
 <h3>Learn about Glance</h3>

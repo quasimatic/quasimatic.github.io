@@ -116,7 +116,7 @@
 
 <li><p>let&rsquo;s enter our first item followed by an enter:</p>
 
-<pre><code>.set(&quot;What needs to be done?&quot;, &quot;1. test this&quot;)
+<pre><code>.set(&quot;What needs to be done?&quot;, &quot;Buy milk&quot;)
 </code></pre></li>
 
 <li><p>Press enter to insert the task:</p>
@@ -126,7 +126,7 @@
 
 <li><p>now for another item:</p>
 
-<pre><code>.set(&quot;What needs to be done?&quot;, &quot;2. test this too&quot;)
+<pre><code>.set(&quot;What needs to be done?&quot;, &quot;Buy eggs&quot;)
 </code></pre></li>
 
 <li><p>Press enter to insert the task:</p>
@@ -136,7 +136,7 @@
 
 <li><p>we&rsquo;ll mark the first item as done, since the checkbox doesnt have a label we look in the dom to see it is an input element which allows us to use:</p>
 
-<pre><code>.click(&quot;1. test this &gt; input&quot;)
+<pre><code>.click(&quot;Buy eggs &gt; checkbox&quot;)
 </code></pre></li>
 </ol>
 
@@ -150,12 +150,12 @@ var glance = new Glance({
 });
 
 glance.url(&quot;http://todomvc.com/&quot;)
-  .click(&quot;These are examples written in pure JavaScript. &gt; React&quot;)
-  .set(&quot;What needs to be done?&quot;, &quot;1. test this&quot;)
+  .click(&quot;Examples &gt; React&quot;)
+  .set(&quot;What needs to be done?&quot;, &quot;Buy milk&quot;)
   .sendKeys(&quot;Enter&quot;)
-  .set(&quot;What needs to be done?&quot;, &quot;2. test this too&quot;)
+  .set(&quot;What needs to be done?&quot;, &quot;Buy eggs&quot;)
   .sendKeys(&quot;Enter&quot;)
-  .click(&quot;1. test this &gt; input&quot;);
+  .click(&quot;Buy eggs &gt; checkbox&quot;);
 </code></pre>
 
 <p>Lets run the script in a new command window: <code>node todo.js</code></p>

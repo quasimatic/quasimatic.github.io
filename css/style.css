@@ -19,3 +19,35 @@ a:hover {
 .dark-section {
 	background-color: #1B1B1B;
 }
+
+.light-grid-section {
+  box-shadow: inset 0 8px 12px 0 rgba(20, 20, 20, 0.5);
+  color: #ffffff;
+  background-color: #5AB9F6;
+  background-image: linear-gradient(rgba(85, 166, 218, 1) 2px, transparent 1px),
+    linear-gradient(90deg, rgba(85, 166, 218, 1) 2px, transparent 1px);
+  background-size: 12px 12px, 12px 12px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+.gray-grid-section {
+  color: #4D4D4D;
+  background-color: #E9E9E9;
+  background-image: linear-gradient(rgba(226, 226, 226, 1) 2px, transparent 1px),
+    linear-gradient(90deg, rgba(226, 226, 226, 1) 2px, transparent 1px);
+  background-size: 11px 11px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+.gray-grid-section a {
+    color: #1A3651;
+    font-weight: bold;
+}
+
+.gray-grid-section p {
+	padding-left: 40px;
+}
+
+.gray-grid-section h3 {
+	padding-top: 10px;
+}

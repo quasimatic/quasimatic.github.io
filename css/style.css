@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+a {
+    color: #fff;
+}
+
+a:active, a:focus {
+	color: #fff;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.dark-section {
+	background-color: #1B1B1B;
+}

@@ -1,43 +1,28 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en-us" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<!doctype html>
+<html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Glance - Language">
-        <meta name="author" content="Quasimatic">
-        <meta name="keyword" content="">
-        <link rel="shortcut icon" href="/favicon.ico">
-        <title>Glance - Language &middot; Quasimatic - Open Source</title>
-        <link rel="stylesheet" href="https://quasimatic.org/css/theme/flatly.css">
-        <link rel="stylesheet" href="https://quasimatic.org/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://quasimatic.org/css/style.css">
-        <script src="https://quasimatic.org/js/jquery.min-2.1.4.js"></script>
-        <script src="https://quasimatic.org/js/bootstrap.min-3.3.5.js"></script>
-        <link href="" rel="alternate" type="application/rss+xml" title="Quasimatic - Open Source" />
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/agate.min.css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-        <script>
-        window.intercomSettings = {
-            app_id: "twcosaoh"
-        };
-    </script>
-        <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/twcosaoh';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Quasimatic - Open Source</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/favicon.png" rel="icon">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/typed.js"></script>
     </head>
-    <body lang="en">
-        <div class="container">
-            <div class="row">
-                <div class="navbar navbar-default " role="navigation">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="https://quasimatic.org">Quasimatic - Open Source</a>
-                    </div>
-                    <div class="navbar-collapse collapse navbar-responsive-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="https://quasimatic.org">Home</a>
-                            </li>
-                        </ul>
+    <body>
+        <div class='dark-section header' style="padding-top: 16px;padding-bottom: 16px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="/">
+                            <img class='logo' src='/img/logo.png' alt='logo' height="64" />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -45,47 +30,183 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-offset-1 col-md-10">
-                    <h3>Glance - Language</h3>
+                    <h1>History of Glance</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-offset-1 col-md-10">
-                    <br>
-                    <h2 id="history">History</h2>
-                    <p>Referencing things can be hard. It can be even harder to reference something that someone else can understand.</p>
+                    <h2 id="history">Introduction</h2>
+                    <p>While testing web applications we got tired of inspecting the DOM to find an element. We wanted a way to reference an element according to what we saw on the page. Through many iterations we developed Glance and we continue to find new and different uses for it.</p>
+                    <div class="text-center" style="margin-top: 60px; margin-bottom:40px;">
+                        <a href="http://quasimatic.org/take-a-glance" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewbox="0 0 100 100" class="svg replaced-svg">
+                                <circle cx="50" cy="50" r="49" style="fill: #F88355;"></circle>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewbox="0 0 100 100" class="svg replaced-svg">
+                                <rect x="2" y="2" width="96" height="96" style="fill: #55B8F8;"></rect>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewbox="0 0 100 100" class="svg replaced-svg">
+                                <polygon points="48,2 2,98 98,98" style="fill: #F1DF2C"></polygon>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewbox="0 0 100 100" class="svg replaced-svg">
+                                <rect x="2" y="2" width="96" height="96" style="fill: #55F85F;"></rect>
+                                <circle cx="50" cy="50" r="30" style="fill: #A955F8;"></circle>
+                            </svg>
+                        </a>
+                    </div>
                     <h2 id="labels">Labels</h2>
-                    <p>Using labels, it allows us to have a stable reference to something without having to worry about the implementation details.</p>
-                    <p>A label alone still requires a lot of wiring up to make it valuable. This is where Glance starts to help out. Putting some querying capabilities behind it we can start to create labels that can work with the program.</p>
-                    <h2 id="locators">Locators</h2>
-                    <p>Locators are what give lookup power to the label.</p>
-                    <h2 id="scopes">Scopes</h2>
-                    <p>Labels alone isn&rsquo;t enough. More often than not referencing something can have many duplicates. Glance allows for scopes. Scopes are used to narrow down an item and help the reader figure out how to easily get to the thing that&rsquo;s being referenced.</p>
+                    <p>The idea started with labels. Labels allows us to have a stable reference without having to worry about how to find it. However, labels still required us to add code.</p>
+                    <p>This is where Glance starts to help out. Putting some querying capabilities behind the label we can start to create labels that can work with the program.</p>
+                    <p>
+                        Example:</p> 
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewbox="0 0 100 100" class="svg replaced-svg">
+                                <circle cx="50" cy="50" r="49" style="fill: #F88355;"></circle>
+                            </svg>
+                        </div>
+                        <div class="col-xs-9" style="font-size: 2em; display: flex; align-items: center; height: 150px;">
+                            Circle
+</div>
+                    </div>
+                    <h2 id="intersects">Intersects</h2>
+                    <p>Example:</p> 
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewbox="0 0 100 100" class="svg replaced-svg">
+                                <rect x="2" y="2" width="96" height="96" style="fill: #55B8F8;"></rect>
+                            </svg>
+                        </div>
+                        <div class="col-xs-9" style="font-size: 2em; display: flex; align-items: center; height: 150px;">
+                            Square ^ Blue
+</div>
+                    </div>
+                    <h2 id="locators">Scopes        <br></h2>
+                    <p>More often than not referencing something can have many duplicates. Using a breadcrumb-like syntax we can narrow down the context for an item and guide the reader to the thing they need.</p>
+                    <p>Example:</p> 
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewbox="0 0 100 100" class="svg replaced-svg">
+                                <rect x="2" y="2" width="96" height="96" style="fill: #55F85F;"></rect>
+                                <circle cx="50" cy="50" r="30" style="fill: #A955F8;"></circle>
+                            </svg>
+                        </div>
+                        <div class="col-xs-9" style="font-size: 2em; display: flex; align-items: center; height: 150px;">
+                            Square &gt; Circle
+</div>
+                    </div>
                     <h2 id="options">Options</h2>
-                    <p>Options give a Glance reference that extra piece of behavior and information when labels and context isn&rsquo;t enough. Since looking up stuff doesn&rsquo;t require a type to specified options can provide a way to limit or narrow the types to search. It can also limit the index from a set. It can also be used to tell Glance how to look up the label and completely customize the lookup behavior.</p>
-                    <h2 id="filters">Filters</h2>
+                    <p>Since we're dealing with computers the default magic doesn't always work. With options we can tell Glance how to look up the label and completely customize the lookup behavior.</p>
                 </div>
             </div>
+        </div>
+        <div class="container" style="background-color: #ffffff; padding: 20px 0;">
             <div class="row">
-                <div class="col-md-12">
-                    <hr>
+                <div class="col-xs-6" style='padding: 0 20px;'>
+                    <img style="height: 32px" src="/img/footer-logo.png" alt="Footer Logo" />
                 </div>
+                <a class="col-xs-6 text-right" href="https://quasimatic.com" style='line-height: 32px; padding: 0 20px; font-family: "Ubuntu"; font-size: 14; color: #696969;'>Quasimatic LLC</a>
             </div>
         </div>
-        <div class="container">
-            <div class="row col-md-12">
-                <footer>
-                    <div class="pull-left">
-                        <p>
-                        &copy; 2015 ~ Quasimatic ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.17 ~ <a href="https://quasimatic.org/license">License</a></p>
-                    </div>
-                    <div class="pull-right">
-                        <a href="https://www.facebook.com/quasimatic" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
-                        <a href="https://twitter.com/quasimatic" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
-                        <a href="https://github.com/quasimatic" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
-                    </div>
-                </footer>
-            </div>
-        </div>
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75706875-1"></script>
+        <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-75706875-1');
+</script>
+        <script>
+    window["_fs_debug"] = false;
+    window["_fs_host"] = "www.fullstory.com";
+    window["_fs_org"] = "1Mm7";
+    window["_fs_namespace"] = "FS";
+    (function(m, n, e, t, l, o, g, y) {
+      if (e in m && m.console && m.console.log) {
+        m.console.log(
+          'FullStory namespace conflict. Please set window["_fs_namespace"].'
+        );
+        return;
+      }
+      g = m[e] = function(a, b) {
+        g.q ? g.q.push([a, b]) : g._api(a, b);
+      };
+      g.q = [];
+      o = n.createElement(t);
+      o.async = 1;
+      o.src = "https://" + _fs_host + "/s/fs.js";
+      y = n.getElementsByTagName(t)[0];
+      y.parentNode.insertBefore(o, y);
+      g.identify = function(i, v) {
+        g(l, { uid: i });
+        if (v) g(l, v);
+      };
+      g.setUserVars = function(v) {
+        g(l, v);
+      };
+      g.identifyAccount = function(i, v) {
+        o = "account";
+        v = v || {};
+        v.acctId = i;
+        g(o, v);
+      };
+      g.clearUserCookie = function(c, d, i) {
+        if (!c || document.cookie.match("fs_uid=[`;`]*`[`;`]*`[`;`]*`")) {
+          d = n.domain;
+          while (1) {
+            n.cookie =
+              "fs_uid=;domain=" +
+              d +
+              ";path=/;expires=" +
+              new Date(0).toUTCString();
+            i = d.indexOf(".");
+            if (i < 0) break;
+            d = d.slice(i + 1);
+          }
+        }
+      };
+    })(window, document, window["_fs_namespace"], "script", "user");
+  </script>
+        <script>
+    window.intercomSettings = {
+      app_id: "twcosaoh"
+    };
+  </script>
+        <script>
+    (function() {
+      var w = window;
+      var ic = w.Intercom;
+      if (typeof ic === "function") {
+        ic("reattach_activator");
+        ic("update", intercomSettings);
+      } else {
+        var d = document;
+        var i = function() {
+          i.c(arguments);
+        };
+        i.q = [];
+        i.c = function(args) {
+          i.q.push(args);
+        };
+        w.Intercom = i;
+        function l() {
+          var s = d.createElement("script");
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://widget.intercom.io/widget/twcosaoh";
+          var x = d.getElementsByTagName("script")[0];
+          x.parentNode.insertBefore(s, x);
+        }
+        if (w.attachEvent) {
+          w.attachEvent("onload", l);
+        } else {
+          w.addEventListener("load", l, false);
+        }
+      }
+    })();
+  </script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </body>
 </html>
